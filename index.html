@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fine Clothing Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      padding-top: 70px; /* space for top bar */
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: #333;
+    }
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .product-card img {
+      /* max-height: 220px; */
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .btn-order {
+      background-color: #0084ff;
+      color: white;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 50px;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .btn-order:hover {
+      background-color: #006bbf;
+      color: white;
+    }
+
+    .product-card img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carousel-inner img {
+  transition: transform 1s ease;
+}
+
+.carousel-item.active img {
+  transform: scale(1.05);
+}
+#productCarousel .carousel-inner {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+carousel-indicators button {
+  width: 10px;                  /* Small circle */
+  height: 10px;
+  border-radius: 50%;           /* Makes it fully round */
+  background-color: #bbb;       /* Inactive color */
+  opacity: 0.6;
+  margin: 0 5px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff;    /* Active color */
+  opacity: 1;
+  transform: scale(1.2);        /* Slight zoom effect for active dot */
+}
+  </style>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<body>
+
+  <!-- Top Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="images/finelogo.png" height="40" alt="Fine Logo">
+    </a>
+
+    <!-- Social Icons -->
+    <div class="d-flex ms-auto">
+      <a href="https://www.facebook.com/finebangladesh" target="_blank" class="nav-link text-white me-3">
+        <i class="fab fa-facebook fa-lg"></i>
+      </a>
+      <a href="https://www.facebook.com/finebangladesh" target="_blank" class="nav-link text-white">
+        <i class="fab fa-instagram fa-lg"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <!-- <h1>Fine Clothing Store</h1> -->
+     <br>
+
+    <div id="productCarousel" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+  
+  <!-- 🔵 Carousel Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- 🖼️ Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/panjabicover.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="images/tee1.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;">
+    </div>
+    <div class="carousel-item">
+      <img src="images/tee1.jpg" class="d-block w-100" style="height: 400px; object-fit: cover;">
+    </div>
+  </div>
+
+  <!-- ⬅️ ➡️ Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- Panajbi Product -->
+      <div class="col">
+        <div class="product-card">
+          <img src="images/panjabi1.jpg" alt="Panajbi" />
+          <!-- <h4>Panajbi</h4> -->
+          <p>Price: BDT 900</p>
+          <!-- <p>Sizes: M, L, XL, XXL</p> -->
+          <a href="https://m.me/finebangladesh" target="_blank" class="btn-order">Order Now</a>
+        </div>
+      </div>
+
+      <!-- T-Shirt Product -->
+      <div class="col">
+        <div class="product-card">
+          <img src="images/tee1.jpg" alt="T-Shirt" />
+          <!-- <h4>T-Shirt</h4> -->
+          <p>Price: BDT 600</p>
+          <!-- <p>Sizes: S, M, L, XL</p> -->
+          <a href="https://m.me/finebangladesh" target="_blank" class="btn-order">Order Now</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="product-card">
+          <img src="images/tee1.jpg" alt="T-Shirt" />
+          <!-- <h4>T-Shirt</h4> -->
+          <p>Price: BDT 600</p>
+          <!-- <p>Sizes: S, M, L, XL</p> -->
+          <a href="https://m.me/finebangladesh" target="_blank" class="btn-order">Order Now</a>
+        </div>
+      </div>
+
+    </div>
+     <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- Panajbi Product -->
+      <div class="col">
+        <div class="product-card">
+          <img src="images/panjabi1.jpg" alt="Panajbi" />
+          <!-- <h4>Panajbi</h4> -->
+          <p>Price: BDT 900</p>
+          <!-- <p>Sizes: M, L, XL, XXL</p> -->
+          <a href="https://m.me/finebangladesh" target="_blank" class="btn-order">Order Now</a>
+        </div>
+      </div>
+
+      <!-- T-Shirt Product -->
+      <div class="col">
+        <div class="product-card">
+          <img src="images/tee1.jpg" alt="T-Shirt" />
+          <!-- <h4>T-Shirt</h4> -->
+          <p>Price: BDT 600</p>
+          <!-- <p>Sizes: S, M, L, XL</p> -->
+          <a href="https://m.me/finebangladesh" target="_blank" class="btn-order">Order Now</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="product-card">
+          <img src="images/tee1.jpg" alt="T-Shirt" />
+          <!-- <h4>T-Shirt</h4> -->
+          <p>Price: BDT 600</p>
+          <!-- <p>Sizes: S, M, L, XL</p> -->
+          <a href="https://m.me/finebangladesh" target="_blank" class="btn-order">Order Now</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
